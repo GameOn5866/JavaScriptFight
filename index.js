@@ -179,7 +179,6 @@ function animate() {
         enemy.velocity.x = 5
     }
 
-    enemy.isAttacking = false
     // detect for collision
     if (
         rectangularCollision({
@@ -243,7 +242,7 @@ window.addEventListener('keydown', (event) => {
         enemy.velocity.y = -20
         break
         case 'ArrowDown':
-        enemy.isAttacking = true
+        enemy.attack()
         break
     }
     console.log(event.key);
